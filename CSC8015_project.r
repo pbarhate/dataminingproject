@@ -27,7 +27,9 @@ ggplot(bigmart,aes(x = Item_Outlet_Sales)) + geom_histogram(colour = "Black",fil
 ## Box plot showing sales by outlet type
 ggplot(bigmart,aes(x = Outlet_Type,y = Item_Outlet_Sales)) + geom_boxplot() + xlab("Outlet Type") + ylab("Item Sales")
 
+usePackage("plyr")
 
+usePackage("dplyr")
 ## Cleaning of missing values in Item Weight
 bigmart <- ddply(bigmart,~Item_Identifier,transform,Item_Weight = ifelse(is.na(Item_Weight), mean(Item_Weight,na.rm = TRUE),Item_Weight))
 ## missing values in outlet size to revalued as "other"
@@ -83,20 +85,3 @@ summary(lm1)
 
 lr_model <- lm(data = train_bigmart, Item_Outlet_Sales ~  Item_MRP  + Outlet_Size + Outlet_Location_Type + Outlet_Type  + Outlet_Age)
 summary(lr_model)
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
