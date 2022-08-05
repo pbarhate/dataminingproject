@@ -85,3 +85,4 @@ summary(lm1)
 
 lr_model <- lm(data = train_bigmart, Item_Outlet_Sales ~  Item_MRP  + Outlet_Size + Outlet_Location_Type + Outlet_Type  + Outlet_Age)
 summary(lr_model)
+plot(lr_model)
