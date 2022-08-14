@@ -8,7 +8,5 @@
 The code folder contains 
 * Readme file for instructions (Readme.doc) 
 * R-code file (dataMiningProject.rmd) 
-* Report (data Mining Group Project- phase 2. doc) 
-* HTML file with total Rcode and output together (knit document) (Group project.html) 
 * Bigmart dataset file(Bigmarta.csv0 
 
